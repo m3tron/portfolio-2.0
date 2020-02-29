@@ -1,12 +1,26 @@
 import React from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+
 import Particle from "./components/Particles";
+import Navbar from "./components/Navbar";
+import Landing from "./components/Landing";
+import AboutMe from "./components/AboutMe";
+import "animate.css";
+import "normalize.css";
 import "./App.css";
 
 const App = () => {
   return (
-    <div>
-      <h1>hello world</h1>
-    </div>
+    <>
+      <BrowserRouter>
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={Landing} />
+          <Route exact path="/about" component={AboutMe} />
+        </Switch>
+      </BrowserRouter>
+      <Particle />
+    </>
   );
 };
 

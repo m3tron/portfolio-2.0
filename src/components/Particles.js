@@ -12,7 +12,7 @@ const particleOptions = {
       }
     },
     color: {
-      value: "#ffffff"
+      value: "#0c194b"
     },
     shape: {
       type: "circle",
@@ -21,7 +21,7 @@ const particleOptions = {
         color: "#000000"
       },
       polygon: {
-        nb_sides: 5
+        nb_sides: 50
       },
       image: {
         src: "img/github.svg",
@@ -40,8 +40,8 @@ const particleOptions = {
       }
     },
     size: {
-      value: 3,
-      random: true,
+      value: 0,
+      random: false,
       anim: {
         enable: false,
         speed: 40,
@@ -50,9 +50,9 @@ const particleOptions = {
       }
     },
     line_linked: {
-      enable: false,
-      distance: 150,
-      color: "#ffffff",
+      enable: true,
+      distance: 200,
+      color: "#531a16",
       opacity: 0.4,
       width: 1
     },
@@ -72,15 +72,15 @@ const particleOptions = {
     }
   },
   interactivity: {
-    detect_on: "canvas",
+    detect_on: "window",
     events: {
       onhover: {
         enable: true,
         mode: "repulse"
       },
       onclick: {
-        enable: true,
-        mode: "push"
+        enable: false,
+        mode: "grab"
       },
       resize: true
     },
@@ -93,8 +93,8 @@ const particleOptions = {
       },
       bubble: {
         distance: 400,
-        size: 40,
-        duration: 2,
+        size: 20,
+        duration: 0.5,
         opacity: 8,
         speed: 3
       },
@@ -113,6 +113,14 @@ const particleOptions = {
   retina_detect: true
 };
 
+const style = {
+  bottom: 0,
+  left: 0,
+  position: "absolute",
+  right: 0,
+  top: 0
+};
+
 export default () => {
-  return <Particles params={particleOptions} />;
+  return <Particles style={style} params={particleOptions} />;
 };
