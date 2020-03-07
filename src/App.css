@@ -1,16 +1,30 @@
-h1 {
-}
-
 html {
+  font-family: "Roboto";
 }
 
+/* Particles */
+canvas {
+  z-index: -100;
+}
+
+/* Navigation */
 nav {
   display: flex;
   justify-content: space-between;
 }
 
-canvas {
-  z-index: -1;
+li {
+  list-style: none;
+  margin-right: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: brown;
 }
 
 .myFace {
@@ -21,17 +35,100 @@ canvas {
   margin-left: 10px;
 }
 
-.container {
-  display: flex;
-  min-height: 85vh;
-  min-width: 100%;
-  justify-content: center;
-  align-items: center;
+.bars {
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 10px;
 }
 
-#landing {
-  text-align: center;
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+  background-color: brown;
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+  background-color: brown;
 }
 
 #links {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem;
+}
+
+/* Container for components */
+.flexContainer {
+  display: flex;
+}
+
+.gridContainer {
+  display: grid;
+}
+
+/* Landing page */
+#landing {
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  min-height: 85vh;
+  text-align: center;
+}
+
+/* Skills page */
+#skills {
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.skillsWrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.icon {
+  font-size: 150px;
+  transition: 0.6s;
+}
+
+.skills {
+  transition: 0.5s;
+  width: 100px;
+  margin: 2rem;
+}
+
+.skills:hover {
+  transition: 0.5s;
+  width: 120px;
+}
+
+.skillCard {
+  display: flex;
+}
+
+.skillTitle {
+  display: none;
+  opacity: 0;
+  justify-content: center;
+}
+
+.skillTitle:hover {
+  opacity: 1;
 }

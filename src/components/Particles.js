@@ -21,7 +21,7 @@ const particleOptions = {
         color: "#000000"
       },
       polygon: {
-        nb_sides: 50
+        nb_sides: 5
       },
       image: {
         src: "img/github.svg",
