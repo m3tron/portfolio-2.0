@@ -1,0 +1,22 @@
+#landing {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  background-color: #292f34;
+}
+
+#landing h1 {
+  font-size: 5rem;
+}
+
+#landing h3 {
+  font-size: 2rem;
+}
+
+#landing h1,
+h3 {
+  font-family: "Satisfy", cursive;
+  color: #16a085;
+}

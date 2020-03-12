@@ -1,16 +1,16 @@
 import React from "react";
 
-export default ({ skill }) => {
+export default ({ skill, key }) => {
   return (
-    <div className="skillCard">
+    <div className="skillCard" key={key}>
       <img
         className="skills"
         src={`https://cdn.svgporn.com/logos/${skill}.svg`}
         alt={skill}
       />
-      <div>
+      {/* <div>
         <span className="skillTitle">{skill}</span>
-      </div>
+      </div> */}
     </div>
   );
 };

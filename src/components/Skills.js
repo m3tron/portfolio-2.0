@@ -32,11 +32,15 @@ const Skills = () => {
     "zenhub"
   ];
 
+  // const generateKey =  => {
+  //   return
+  // }
+
   return (
     <div className="gridContainer" id="skills">
       <div className="skillsWrapper">
         {frontend.map(skill => (
-          <SkillImage skill={skill} />
+          <SkillImage skill={skill} key={frontend.indexOf(skill)} />
         ))}
       </div>
       <div className="skillsWrapper">
